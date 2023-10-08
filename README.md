@@ -6,9 +6,8 @@ user: student74
 ```
 ## Структура проекта
 
-postgresql_cluster - ansible плейбук
-
-sre-course - helm чарт
+postgresql_cluster - ansible плейбук  
+sre-course - helm чарт  
 
 ## Создание ВМ
 
