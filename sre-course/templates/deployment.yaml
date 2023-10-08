@@ -48,7 +48,10 @@ spec:
               path: /healthz/ready
               port: http
             initialDelaySeconds: 1
-            periodSeconds: 10              
+            periodSeconds: 10 
+          envFrom:  
+            - configMapRef:
+                name: {{ include "sre-course.fullname" . }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

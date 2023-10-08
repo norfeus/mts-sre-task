@@ -1,4 +1,4 @@
-replicaCount: 1
+replicaCount: 2
 
 namespace: sre-cource-student-74
 
@@ -33,6 +33,10 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+variables:
+    ASPNETCORE_URLS: http://*:8082
+    CONNECTIONSTRINGS__PGCONNECTION: server=77.105.185.161; port=5000; database=weather; user id=postgres; password=posgres-pass;
+
 service:
   type: ClusterIP
   port: 8082
@@ -44,7 +48,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: weather-api.sre-cource.example
+    - host: weather-api111.sre-cource.example
       paths:
         - path: /
           pathType: ImplementationSpecific
