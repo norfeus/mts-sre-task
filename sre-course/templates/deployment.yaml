@@ -24,7 +24,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "sre-course.serviceAccountName" . }}
+#      serviceAccountName: {{ include "sre-course.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -39,12 +39,16 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /healthz/live
               port: http
+            initialDelaySeconds: 2
+            periodSeconds: 5
           readinessProbe:
             httpGet:
-              path: /
+              path: /healthz/ready
               port: http
+            initialDelaySeconds: 1
+            periodSeconds: 10              
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
