@@ -12,10 +12,15 @@ user: student74
 Пример, который был взят за основу - https://github.com/vitabaks/postgresql_cluster
 
 
-Файл для sql лежит в /app/Migrations/init.sql
 
-с содержанием:
+## Конфигурация БД
 
+Файл для миграции sql лежит в образе - /app/Migrations/init.sql
+
+Подключаюсь к БД по адресу балансировщика, порт 5000
+Создаю БД weather и выполняю файл миграции:
+
+```
 create table if not exists public.cities
 (
     id   bigserial,
@@ -30,6 +35,7 @@ create table if not exists public.forecast
     temperature integer,
     summary     text
 );
+```
 
-
+![БД и таблицы созданы](db_created.png)
 
