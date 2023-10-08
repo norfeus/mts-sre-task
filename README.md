@@ -7,15 +7,16 @@ user: student74
 
 ## Создание ВМ
 
-![Схема](vm-diag.png)
+![Схема](img/vm-diag.png)
 
 Для решения поставленной задачи было создано 6 вирутальных машин на базе Debian 11
 
-![Схема](vm-cloud.png)
+![Схема](img/vm-cloud.png)
 
 ## Настройка ansible
 Пример, который был взят за основу - https://github.com/vitabaks/postgresql_cluster
 
+![Схема](img/ansible_result.png)
 
 
 ## Конфигурация БД
@@ -42,5 +43,5 @@ create table if not exists public.forecast
 );
 ```
 
-![БД и таблицы созданы](db_created.png)
+![БД и таблицы созданы](img/db_created.png)
 
