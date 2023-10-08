@@ -6,7 +6,12 @@ user: student74
 ```
 
 ## Создание ВМ
+
+![Схема](vm-diag.png)
+
 Для решения поставленной задачи было создано 6 вирутальных машин на базе Debian 11
+
+![Схема](vm-cloud.png)
 
 ## Настройка ansible
 Пример, который был взят за основу - https://github.com/vitabaks/postgresql_cluster
