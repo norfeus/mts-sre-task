@@ -27,7 +27,7 @@ synchronous_mode_strict: false  # if 'true' then block all client writes to the 
 synchronous_node_count: 1  # number of synchronous standby databases
 
 # Load Balancing
-with_haproxy_load_balancing: false  # or 'true' if you want to install and configure the load-balancing
+with_haproxy_load_balancing: true  # or 'true' if you want to install and configure the load-balancing
 haproxy_listen_port:
   master: 5000
   replicas: 5001
@@ -295,7 +295,7 @@ postgresql_pgpass:
 
 
 # PgBouncer parameters
-pgbouncer_install: true  # or 'false' if you do not want to install and configure the pgbouncer service
+pgbouncer_install: false  # or 'false' if you do not want to install and configure the pgbouncer service
 pgbouncer_conf_dir: "/etc/pgbouncer"
 pgbouncer_log_dir: "/var/log/pgbouncer"
 pgbouncer_listen_addr: "0.0.0.0"
