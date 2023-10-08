@@ -1,9 +1,14 @@
 # sre-mts-task
 ДОМАШНЕЕ ЗАДАНИЕ ПО МОДУЛЮ 2
+
 ```
 namespace: sre-cource-student-74
 user: student74
 ```
+## Структура проекта
+
+postgresql_cluster - ansible плейбук
+sre-course - helm чарт
 
 ## Создание ВМ
 
@@ -16,7 +21,12 @@ user: student74
 ## Настройка ansible
 Пример, который был взят за основу - https://github.com/vitabaks/postgresql_cluster
 
+ВМ с балансировщиком была выбрана для запуска плэйбуков, внесены необходимые изменения в файлы: inventory и vars/main.yml. 
+Результат выполнения плэйбука:
+
 ![Схема](img/ansible_result.png)
+
+## Helm
 
 
 ## Конфигурация БД
@@ -45,3 +55,7 @@ create table if not exists public.forecast
 
 ![БД и таблицы созданы](img/db_created.png)
 
+## Результаты деплоя
+
+
+![Pods](img/pods.png)

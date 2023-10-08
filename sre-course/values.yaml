@@ -34,12 +34,12 @@ securityContext: {}
   # runAsUser: 1000
 
 variables:
-    ASPNETCORE_URLS: http://*:8082
-    CONNECTIONSTRINGS__PGCONNECTION: server=77.105.185.161; port=5000; database=weather; user id=postgres; password=posgres-pass;
+    ASPNETCORE_URLS: http://*:8081
+    CONNECTIONSTRINGS__PGCONNECTION: server=77.105.185.161; port=5000; database=weather; user id=postgres; password=postgres-pass;
 
 service:
   type: ClusterIP
-  port: 8082
+  port: 8081
 
 ingress:
   enabled: true

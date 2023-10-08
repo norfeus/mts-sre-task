@@ -4,6 +4,8 @@ metadata:
   name: {{ include "sre-course.fullname" . }}
   labels:
     {{- include "sre-course.labels" . | nindent 4 }}
+  annotations:
+    rollme: {{ randAlphaNum 5 | quote }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -37,21 +39,21 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: {{ include "sre-course.fullname" . }}
           livenessProbe:
             httpGet:
               path: /healthz/live
               port: http
-            initialDelaySeconds: 2
+            initialDelaySeconds: 5
             periodSeconds: 5
           readinessProbe:
             httpGet:
               path: /healthz/ready
               port: http
-            initialDelaySeconds: 1
-            periodSeconds: 10 
-          envFrom:  
-            - configMapRef:
-                name: {{ include "sre-course.fullname" . }}
+            initialDelaySeconds: 5
+            periodSeconds: 5 
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
