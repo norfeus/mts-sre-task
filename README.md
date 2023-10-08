@@ -1,5 +1,4 @@
-# sre-mts-task
-ДОМАШНЕЕ ЗАДАНИЕ ПО МОДУЛЮ 2
+# ДОМАШНЕЕ ЗАДАНИЕ ПО МОДУЛЮ 2
 
 ```
 namespace: sre-cource-student-74
@@ -7,8 +6,8 @@ user: student74
 ```
 ## Структура проекта
 
-postgresql_cluster - ansible плейбук
-sre-course - helm чарт
+postgresql_cluster - ansible плейбук  
+sre-course - helm чарт  
 
 ## Создание ВМ
 
@@ -26,7 +25,6 @@ sre-course - helm чарт
 
 ![Схема](img/ansible_result.png)
 
-## Helm
 
 
 ## Конфигурация БД
