@@ -37,7 +37,7 @@
 10.0.10.5 postgresql_exists=false
 
 [replica]
-10.0.10.5 postgresql_exists=false
+10.0.10.6 postgresql_exists=false
 #10.128.64.143 hostname=pgnode03 postgresql_exists=false
 #10.128.64.144 hostname=pgnode04 postgresql_exists=false new_node=true
 
