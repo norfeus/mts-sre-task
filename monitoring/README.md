@@ -48,27 +48,12 @@ user: student74
 ```
 
 
-
-## Alertmanager
-
-Добавил alertmanager в конфиг prometheus:
-
-```
-alerting:
-  alertmanagers:
-  - stating_configs:
-    - targets: ['127.0.0.1:9093']
-
-```
-
 ## 4 Golden signals
 
 Для мониторинга 4 золотых сигналов я использовал:  
 Latency - probe_http_duration_seconds (blackbox)  
 Errors - probe_http_status_code (blackbox)  
+Network - node_network_receive_bytes_total(node_exporter инстанс с HAproxy)
+Saturation - node_filesystem_free_bytes (node_exporter инстансы с БД)
 
-
-
-
-![Схема](.png)
 
