@@ -63,9 +63,9 @@ alerting:
 
 ## 4 Golden signals
 
-Для мониторинга 4 золотых сигналов я использовал:
-Latency - probe_http_duration_seconds (blackbox)
-Errors - probe_http_status_code (blackbox)
+Для мониторинга 4 золотых сигналов я использовал:  
+Latency - probe_http_duration_seconds (blackbox)  
+Errors - probe_http_status_code (blackbox)  
 
 
 
