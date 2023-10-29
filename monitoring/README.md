@@ -52,7 +52,9 @@ user: student74
 
 ## Алерты в prometheus  
 
-Для каждого компонента системы (Node exporter, Patroni, etcd, Postgres) было выбрано по одному алерту с ресурса: : https://samber.github.io/awesome-prometheus-alerts/ 
+Для каждого компонента системы (Node exporter, Patroni, etcd, Postgres) было выбрано по одному алерту с ресурса: : 
+https://samber.github.io/awesome-prometheus-alerts/ 
+
 ![Alerts](img/alerts.png)
 
 ## Grafana  
