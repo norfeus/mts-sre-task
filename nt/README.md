@@ -76,6 +76,8 @@ API: HTTP://serverIP/Forecast
 
 ## Максимальная производительность системы
 
+Параметры запуска:  
+![Параметры запуска](img/crash_param.png)  
 
 ![Под 1](img/crash_g_01.png) 
 
