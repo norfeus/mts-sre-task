@@ -8,8 +8,8 @@ user: student74
 
 postgresql_cluster - ansible плейбук  
 sre-course - helm чарт  
-monitoring - задание по мониторингу
-nt - задание по нагрузочному тестированию
+monitoring - задание по мониторингу  
+nt - задание по нагрузочному тестированию  
 
 ## Создание ВМ
 
